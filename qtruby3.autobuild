@@ -1,0 +1,24 @@
+cmake_package 'smokegen' do |pkg|
+    pkg.depends_on 'qt5base'
+end
+
+cmake_package "smokeqt" do |pkg|
+    pkg.depends_on "smokegen"
+
+    pkg.depends_on 'qt5base'
+    pkg.depends_on 'qt5qml'
+    pkg.depends_on 'qt5quick'
+    pkg.depends_on 'qt5location'
+    pkg.depends_on 'qt5sensors'
+    pkg.depends_on 'qt5webkit'
+    pkg.depends_on 'qt5webkitwidgets'
+    pkg.depends_on 'qt5svg'
+    pkg.depends_on 'qt5xmlpatterns'
+    pkg.depends_on 'qt5script'
+    pkg.depends_on 'qt5multimedia'
+    pkg.depends_on 'qt5tools'
+end
+
+cmake_package "qtruby" do |pkg|
+    pkg.depends_on "smokeqt"
+end

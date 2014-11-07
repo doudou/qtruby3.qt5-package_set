@@ -1,0 +1,56 @@
+qt5base:
+    ubuntu,debian:
+        - qtbase5-dev
+
+qt5declarative:
+    ubuntu,debian:
+        - qtdeclarative5-dev
+
+qt5qml:
+    default:
+        - osdep: qt5declarative
+
+qt5quick:
+    default:
+        - osdep: qt5declarative
+
+qt5mobility:
+    debian,ubuntu:
+        - qtmobility-dev
+
+qt5location:
+    default:
+        - osdep: qt5mobility
+
+qt5sensors:
+    debian,ubuntu:
+        - libqt5sensors5-dev
+
+qt5webkit:
+    debian,ubuntu:
+        - libqt5webkit5-dev
+
+qt5webkitwidgets:
+    osdep:
+        - qt5webkit
+
+qt5svg:
+    debian,ubuntu:
+        - libqt5svg5-dev
+
+qt5xmlpatterns:
+    debian,ubuntu:
+        - libqt5xmlpatterns5-dev
+
+qt5script:
+    debian,ubuntu:
+        - qtscript5-dev
+
+qt5multimedia:
+    debian,ubuntu:
+        - qtmultimedia5-dev
+
+qt5tools:
+    debian,ubuntu:
+        - qttools5-dev
+        - qttools5-dev-tools
